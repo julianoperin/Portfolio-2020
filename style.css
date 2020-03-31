@@ -1,0 +1,440 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Ruhl";
+  src: url("/fonts/FrankRuhlLibre-Regular.ttf");
+}
+@font-face {
+  font-family: "Ruhl Medium";
+  src: url("/fonts/FrankRuhlLibre-Medium.ttf");
+}
+@font-face {
+  font-family: "Vibes";
+  src: url("/fonts/GreatVibes-Regular.ttf");
+}
+
+html {
+  font-size: 62.5%;
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(1.5rem + 1vw);
+  --big: calc(6rem + 1vw);
+  --special-color: #906272;
+  --background-color: #414141;
+  --gray-text: #525252;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--header1);
+}
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: var(--text);
+}
+h2 {
+  font-size: var(--header2);
+}
+h3 {
+  font-size: var(--header3);
+}
+h4,
+h5 {
+  font-size: var(--header4);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: "Ruhl", sans-serif;
+  animation: opening 1s ease-in-out forwards;
+}
+h1 {
+  font-family: "Vibes", sans-serif;
+}
+
+/************* NAV SECTION *****************/
+.main-head {
+  width: 95%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  min-height: 10vh;
+}
+#logo {
+  flex: 1 1 20rem;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-start;
+  flex: 9 1 20rem;
+  z-index: 5;
+}
+
+.nav-links a {
+  margin-right: 5rem;
+}
+
+/********************* HERO SECTION *********************/
+.hero {
+  min-height: 90vh;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-introduction {
+  flex: 1 1 45rem;
+  text-align: center;
+  z-index: 4;
+}
+
+.hero-images {
+  flex: 1 1 45rem;
+  z-index: 3;
+}
+
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+  height: 100%;
+}
+
+.hero-introduction h2 {
+  padding: 5rem;
+}
+
+.hero-introduction p {
+}
+
+.burger,
+.menu-check {
+  display: none;
+}
+
+/******************************** ABOUT SECTION *************************/
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  color: white;
+  background: var(--background-color);
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  z-index: 2;
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+.about-text h2 {
+  font-family: "Vibes";
+  padding: 4rem;
+}
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-image h5 {
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/******************************* CONTACT SECTION ***********************/
+
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+.form-wrapper h2 {
+  margin: 5rem 0rem;
+}
+.form-wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+.form-wrapper label {
+  display: block;
+}
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+.form-wrapper button {
+  padding: 1rem 8rem;
+  background: var(--special-color);
+  color: white;
+  border: none;
+  width: 100%;
+}
+.contact img {
+  flex: 1 1 40rem;
+}
+.box2 {
+  background: lightblue;
+}
+
+/*************************** FOOTER SECTION *************************/
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 10vh;
+}
+/***************************************************************/
+/*************************  ANIMATION  ************************/
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Music Animation */
+
+#music-one {
+  animation: music 1.5s ease infinite alternate;
+}
+
+#music-two {
+  animation: music 1.5s ease infinite alternate 0.5s;
+}
+
+#music-three {
+  animation: music 1.5s ease infinite alternate;
+}
+
+@keyframes music {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(3%);
+  }
+}
+/* Plant Animation */
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-13%);
+  }
+}
+/* Animation Guy */
+#me {
+  animation: me 1.2s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+/* Clock */
+#clock-arrow {
+  animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/************ END ANIMATION  *************/
+
+/*********************************************************************/
+/*************************** MEDIA QUERIES ***************************/
+@media screen and (max-width: 1355px) {
+  html {
+    font-size: 53%;
+  }
+  svg {
+    text-align: center;
+    width: 110%;
+  }
+  .splash {
+  }
+}
+@media screen and (max-width: 1050px) {
+}
+@media screen and (max-width: 940px) {
+}
+
+@media screen and (max-width: 844px) {
+  .splash {
+    display: none;
+  }
+  .hero-introduction {
+    flex: 1 1 55rem;
+    text-align: center;
+    z-index: 4;
+  }
+
+  .hero-images {
+    flex: 1 1 55rem;
+    z-index: 3;
+  }
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+
+  /***** About Section ******/
+  .about-text div {
+    padding: 3rem 3rem;
+  }
+
+  .contact img {
+    display: none;
+  }
+  footer ul {
+    order: 1;
+  }
+  footer h4 {
+    order: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* BURGER THING */
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: black;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  .nav-links a {
+    color: white;
+    font-size: 6rem;
+    font-family: monospace;
+    margin-bottom: 5rem !important;
+  }
+  .nav-links {
+    background: linear-gradient(#38d39f, #38a4d3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease;
+  }
+
+  .nav-open {
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
+@media screen and (max-width: 680px) {
+  svg {
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3rem;
+    --big: 8rem;
+  }
+}
