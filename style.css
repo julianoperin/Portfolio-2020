@@ -59,9 +59,9 @@ a {
 }
 body {
   font-family: 'Cormorant Garamond', serif;
-  animation: opening 1s ease-in-out forwards;
+  animation: opening 1.5s ease-in-out forwards;
   cursor: none;
-
+  overflow-x: hidden;
 }
 h1 {
   font-family: "Vibes", sans-serif;
@@ -149,7 +149,9 @@ nav {
   cursor: pointer;
   border: none;
 }
-
+.hero-introduction button:hover {
+  background-image: linear-gradient(to right, #38a4d3, #38d39f, #38a4d3);
+}
 .burger,
 .menu-check {
   display: none;
@@ -159,6 +161,7 @@ nav {
 /* Parent Container */
 .works {
   min-height: 100vh;
+  background: #f5f5f5;
 
 }
 .my-works{
@@ -193,6 +196,7 @@ nav {
   box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   cursor: pointer;
+  z-index: 4;
 }
 .item::after {
   content: "";
@@ -514,7 +518,7 @@ form {
   left: 0;
   z-index: -1;
   width: 700px;
-  height: 400px;
+  height: 340px;
 }
 .main-footer {
   position: relative;
@@ -551,6 +555,7 @@ form {
   overflow: hidden;
   position: relative;
   text-align: center;
+  z-index: 4;
 }
 .btn-social i {
   line-height: 65px;
@@ -683,8 +688,10 @@ form {
   transform-origin: 100% 100%;
   z-index: 4;
 }
-.nav-active {
-  background: black;
+
+
+.cursor.nav-active {
+  background: linear-gradient(#38d39f, #38a4d3);
   transform: scale(2.2);
 }
 .cursor.explore-active {
@@ -702,7 +709,7 @@ form {
 
 /* For nav-links */
 .link-grow {
-  transform: scale(2.5, 1.5); /* Equal to scaleX(2) scaleY(0.5) */
+  transform: scale(2.9, 1.9); /* Equal to scaleX(2) scaleY(0.5) */
   background: black;
 }
 
@@ -717,6 +724,38 @@ form {
 
 form{
   z-index: 150;
+}
+
+/* Back to Top Btn */
+.to-top {
+  background: linear-gradient(#38d39f, #38a4d3);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s;
+}
+
+.to-top.active-scroll {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 4;
+}
+.to-top.active-scroll:hover {
+/* transform: rotate(360deg); */
+transform: scale(1.2);
+background-image: linear-gradient(to right, #38d39f, #38a4d3, #38d39f)
 }
 
 /*********************************************************************/
@@ -775,11 +814,21 @@ form{
     display: block;
     transition: all 0.5s ease;
   }
+  .burger.burger-Bg{
+    background: white;
+  }
+  
   .nav-links a {
     color: white;
     font-size: 5rem;
     font-family: monospace;
   }
+
+  .nav-links a:hover{
+    color: black;
+    transition: all 1s ease;
+  }
+
   .nav-links li {
     margin: 2.5rem;
   }
@@ -798,6 +847,7 @@ form{
 
   .nav-open {
     transform: translateX(-100%);
+    cursor: auto;
   }
 
   .toggle .line1 {
@@ -811,6 +861,8 @@ form{
     transform: rotateZ(-45deg) translateY(-300%);
     background: white;
   }
+
+
 }
 /************************ WORKS SECTION *************************/
 @media (max-width: 1200px) {

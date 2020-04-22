@@ -13,16 +13,18 @@
       crossorigin="anonymous"
     ></script>
     <title>Juliano Perin</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
   </head>
   <body>
     <header class="main-head">
       <nav>
         <h1 id="logo">JP</h1>
         <ul class="nav-links">
-          <li><a href="#home" class="hov">Home</a></li>
-          <li><a href="#about" class="hov">About</a></li>
-          <li><a href="#work" class="hov">Projects</a></li>
-          <li><a href="#contact" class="hov">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Juliano_Perin_Resume.pdf" download="resume.pdf">Resume <i class="far fa-file-pdf"></i></a></li>
         </ul>
         <div class="burger">
           <span class="line1 line"></span>
@@ -40,7 +42,12 @@
         <div class="hero-introduction">
           <h2>
             Hi,<br />
-            I'm <span class="name">Juliano</span>, <br />
+            I'm 
+            <span
+              class="txt-type name"
+              data-wait="3000"
+              data-words='["Juliano Perin"]'
+            >Juliano</span>, <br>
             Web Developer.
           </h2>
           <button>Contact Me</button>
@@ -1628,7 +1635,7 @@
       </section>
       <!-- FOOTER -->
       <footer class="main-footer">
-        <img src="wave.png" class="wave" alt="wave">
+        <img src="./img/wave.png" class="wave" alt="wave">
         <div class="first-part"><h2>Juliano Perin &copy; 2020</h2></div>
         <div class="middle">
           <div class="middle">
@@ -1644,16 +1651,18 @@
             <a class="btn-social anchor" href="#">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a class="btn-social anchor insta" href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
           </div>
         </div>
       </footer>
+      <!-- Back to top btn -->
+      <a href="#" class="to-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
 
     </main>
 
     <script src="app.js"></script>
     <script src="cursor.js"></script>
+    <script src="/typewriter.js"></script>
   </body>
 </html>

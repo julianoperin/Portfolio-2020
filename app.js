@@ -1,6 +1,7 @@
 const nav = document.querySelector(".nav-links");
 const burger = document.querySelector(".burger");
 const links = nav.querySelectorAll("a");
+const bodyPointer = document.querySelector("body");
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("nav-open");
@@ -33,6 +34,7 @@ inputs.forEach(input => {
   input.addEventListener("focus", addcl);
   input.addEventListener("blur", remcl);
 });
+
 // Prevent Default for Form Submission
 document.getElementById("myForm").onkeypress = function(e) {
   var key = e.charCode || e.keyCode || 0;
